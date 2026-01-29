@@ -4,21 +4,74 @@
 <head>
     <meta charset="UTF-8">
     <title>Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
 
-<header>
-    <p><strong>Punto 1.</strong></p>
-    <p><strong>Punto 2.</strong></p>
-    <p><strong>Punto 3.</strong></p>
-    <p><strong>Punto 4.</strong></p>
-    <p><strong>Punto 5.</strong></p>
-</header>
+    <!-- CABECERA -->
+    <header>
+        <h1>Mi Portfolio Profesional</h1>
 
-<footer>
-    <p>Footer del portfolio</p>
-</footer>
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobremi">Sobre mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <section id="inicio">
+            <h2>Inicio</h2>
+            <p>Bienvenido a mi portfolio profesional.</p>
+        </section>
+
+        <section id="sobremi">
+            <h2>Sobre mí</h2>
+            <p>Breve descripción sobre quién soy y a qué me dedico.</p>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos</h2>
+            <p>Aquí se mostrarán algunos de mis trabajos.</p>
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+
+            <form>
+                <p>
+                    <label>Nombre:</label><br>
+                    <input type="text">
+                </p>
+
+                <p>
+                    <label>Email:</label><br>
+                    <input type="email">
+                </p>
+
+                <p>
+                    <label>Mensaje:</label><br>
+                    <textarea></textarea>
+                </p>
+
+                <p>
+                    <input type="submit" value="Enviar">
+                </p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA -->
+    <footer>
+        <p>© 2026 - Mi Portfolio</p>
+    </footer>
 
 </body>
 </html>
