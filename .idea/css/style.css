@@ -1,227 +1,268 @@
 /* =========================
-   RESET + VARIABLES
-========================= */
-:root{
-    --bg-dark: #090C08;
-    --bg-light: #f4f4f4;
-    --card: #ffffff;
+   GUIA DE ESTILOS
+   =========================
+   Colores:
+   - Fondo: #0f1115
+   - Superficie: #161a22
+   - Primario: #6cf2c2
+   - Texto: #eaeaea
+   ========================= */
 
-    --primary: #5D5179;   /* morado principal */
-    --accent: #CC444B;    /* rojo acento */
-    --muted: #A5A5A5;
-    --black: #000000;
-
-    --radius: 18px;
-    --shadow-soft: 0 10px 30px rgba(0,0,0,0.08);
-    --shadow-strong: 0 25px 60px rgba(0,0,0,0.12);
+:root {
+  --color-bg: #0f1115;
+  --color-surface: #161a22;
+  --color-primary: #6cf2c2;
+  --color-text: #eaeaea;
+  --radius: 14px;
+  --transition: 0.25s ease;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+/* RESET BÁSICO */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body{
-    font-family: "Quicksand", Arial, sans-serif;
-    background:
-            linear-gradient(
-                    rgba(9,12,8,0.85),
-                    rgba(9,12,8,0.85)
-            ),
-            url("../img/Fondo.png") no-repeat center center fixed;
-    background-size: cover;
-    color: var(--black);
-    line-height: 1.7;
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
 }
 
 /* =========================
-   TIPOGRAFÍA
-========================= */
-h1, h2, h3{
-    font-family: "Bungee", system-ui, sans-serif;
-    letter-spacing: 0.6px;
-    color: var(--primary);
+   HEADER / NAV
+   ========================= */
+.app-header {
+  background: rgba(15, 17, 21, 0.9);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  backdrop-filter: blur(8px);
 }
 
-/* =========================
-   HEADER
-========================= */
-header{
-    padding: 60px 20px 80px;
-    text-align: center;
-    color: white;
+.nav {
+  max-width: 1100px;
+  margin: auto;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-header h1{
-    font-size: 34px;
-    margin-bottom: 18px;
-    color: white;
+.logo {
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
-nav ul{
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 36px;
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
 }
 
-nav a{
-    color: var(--muted);
-    text-decoration: none;
-    font-weight: 700;
-    position: relative;
+.nav-links a {
+  text-decoration: none;
+  color: var(--color-text);
+  opacity: 0.8;
+  transition: opacity var(--transition);
 }
 
-nav a:hover{
-    color: white;
+.nav-links a:hover {
+  opacity: 1;
 }
 
 /* =========================
    MAIN
-========================= */
-main{
-    max-width: 1100px;
-    margin: -60px auto 120px;
-    padding: 0 20px;
-}
-
-/* =========================
-   SECCIONES / TARJETAS
-========================= */
-section{
-    background: var(--card);
-    border-radius: var(--radius);
-    padding: 64px;
-    margin-bottom: 90px;
-    box-shadow: var(--shadow-soft);
+   ========================= */
+.app-main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
 }
 
 /* =========================
    HERO
-========================= */
-.hero{
-    box-shadow: var(--shadow-strong);
+   ========================= */
+.hero {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.eyebrow{
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 13px;
-    font-weight: 800;
-    color: var(--accent);
-    margin-bottom: 18px;
+.hero-content {
+  text-align: center;
+  max-width: 600px;
 }
 
-.hero h2{
-    font-size: 54px;
-    line-height: 1.1;
-    margin-bottom: 20px;
+.hero-img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  border: 3px solid var(--color-primary);
 }
 
-.lead{
-    font-size: 19px;
-    color: #333;
-    max-width: 65ch;
-    margin-bottom: 30px;
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.hero p {
+  opacity: 0.85;
+  margin-bottom: 24px;
 }
 
 /* =========================
    BOTONES
-========================= */
-.cta{
-    display: flex;
-    gap: 16px;
-    flex-wrap: wrap;
+   ========================= */
+.btn-primary {
+  display: inline-block;
+  background: var(--color-primary);
+  color: #000;
+  padding: 14px 30px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform var(--transition), box-shadow var(--transition);
 }
 
-.btn{
-    background: var(--primary);
-    color: white;
-    text-decoration: none;
-    padding: 14px 26px;
-    border-radius: 999px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.btn:hover{
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-}
-
-.btn-outline{
-    background: transparent;
-    color: var(--primary);
-    border: 2px solid var(--primary);
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(108, 242, 194, 0.35);
 }
 
 /* =========================
-   TEXTO SECUNDARIO
-========================= */
-section p{
-    color: #333;
-    margin-bottom: 16px;
+   SECCIONES
+   ========================= */
+.section {
+  margin-top: 100px;
 }
 
-section ul{
-    margin-top: 20px;
-    padding-left: 20px;
-}
-
-section li{
-    margin-bottom: 10px;
-    color: #444;
+.section h3 {
+  font-size: 2rem;
+  margin-bottom: 30px;
 }
 
 /* =========================
-   IMÁGENES
-========================= */
-section img{
-    width: 100%;
-    border-radius: 14px;
-    margin: 28px 0;
-    box-shadow: var(--shadow-soft);
+   PERFIL
+   ========================= */
+.perfil-grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.perfil-img {
+  width: 100%;
+  border-radius: var(--radius);
 }
 
 /* =========================
-   FORMULARIO
-========================= */
-form p{
-    margin-bottom: 18px;
+   PROYECTOS
+   ========================= */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
 }
 
-form input,
-form textarea{
-    width: 100%;
-    padding: 12px 14px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
-    font-family: inherit;
+.card {
+  background: var(--color-surface);
+  border-radius: var(--radius);
+  padding: 20px;
+  transition: transform var(--transition), background var(--transition);
 }
 
-form textarea{
-    height: 120px;
+.card:hover {
+  transform: translateY(-6px);
+  background: #1c2230;
 }
 
-form input[type="submit"]{
-    background: var(--accent);
-    color: white;
-    border: none;
-    padding: 14px 28px;
-    border-radius: 999px;
-    font-weight: 800;
-    cursor: pointer;
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-bottom: 15px;
+}
+
+.card h4 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  opacity: 0.8;
+}
+
+/* TAGS */
+.tags {
+  margin-top: 12px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 14px;
+  margin-right: 6px;
+  background: rgba(108, 242, 194, 0.15);
+  border-radius: 20px;
+  font-size: 0.8rem;
+}
+
+/* =========================
+   CONTACTO
+   ========================= */
+.contact-form {
+  max-width: 500px;
+}
+
+.contact-form label {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px;
+  background: var(--color-surface);
+  border: 1px solid #222;
+  border-radius: var(--radius);
+  color: var(--color-text);
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
 }
 
 /* =========================
    FOOTER
-========================= */
-footer{
-    background: var(--bg-dark);
-    color: var(--muted);
+   ========================= */
+.app-footer {
+  margin-top: 120px;
+  padding: 40px 20px;
+  text-align: center;
+  opacity: 0.6;
+}
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+@media (max-width: 768px) {
+  .perfil-grid {
+    grid-template-columns: 1fr;
     text-align: center;
-    padding: 28px;
-    font-size: 14px;
+  }
 }

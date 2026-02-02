@@ -1,178 +1,126 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <title>Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Profesional | Marcos</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
 
-<!-- CABECERA -->
-<header>
-    <h1>Mi Portfolio Profesional</h1>
+<header class="app-header">
+  <nav class="nav">
+    <h1 class="logo">Marcos.dev</h1>
 
-    <nav>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#sobremi">Sobre mí</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
-    </nav>
+    <ul class="nav-links">
+      <li><a href="#inicio">Inicio</a></li>
+      <li><a href="#perfil">Perfil</a></li>
+      <li><a href="#proyectos">Proyectos</a></li>
+      <li><a href="#contacto">Contacto</a></li>
+    </ul>
+  </nav>
 </header>
 
-<!-- CONTENIDO PRINCIPAL -->
-<main>
+<main class="app-main">
 
-    <!-- INICIO -->
-    <section id="inicio" class="hero">
-        <p class="eyebrow">Portfolio personal</p>
+  <!-- HERO -->
+  <section id="inicio" class="hero">
+    <div class="hero-content">
+      <img src="img/foto.jpg" alt="Foto de perfil" class="hero-img" />
 
-        <h2>Hola, soy Marcos.</h2>
-
-        <p class="lead">
-            Soy desarrollador web enfocado en la creación de interfaces limpias,
-            accesibles y bien estructuradas utilizando HTML y CSS. Me interesa
-            especialmente el diseño minimalista, la experiencia de usuario y
-            la organización clara del código.
-        </p>
-
+        <h2>Soy Marcos Heredia</h2>
         <p>
-            En este portfolio podrás encontrar información sobre mí, algunos
-            de los proyectos que he desarrollado y una forma sencilla de
-            ponerte en contacto conmigo.
-
+            Desarrollador web enfocado en crear interfaces claras, código mantenible
+            y experiencias digitales con mentalidad profesional.
         </p>
 
-        <div class="cta">
-            <a class="btn" href="#proyectos">Ver proyectos</a>
-            <a class="btn btn-outline" href="#contacto">Contactar</a>
+      <a href="#proyectos" class="btn-primary">Ver proyectos</a>
+    </div>
+  </section>
+
+  <!-- PERFIL -->
+  <section id="perfil" class="section">
+    <h3>Perfil profesional</h3>
+
+    <div class="perfil-grid">
+      <img src="img/foto.jpg" alt="Foto profesional" class="perfil-img" />
+
+      <p>
+        Desarrollador web con formación técnica en maquetación y diseño de interfaces.
+        Trabajo con HTML semántico, CSS estructurado y enfoque en experiencia de usuario.
+      </p>
+    </div>
+  </section>
+
+  <!-- PROYECTOS -->
+  <section id="proyectos" class="section">
+    <h3>Proyectos</h3>
+
+    <div class="cards-grid">
+
+      <article class="card">
+        <img src="img/foto.jpg" alt="Proyecto" />
+        <h4>Music Tracker App</h4>
+        <p>Aplicación de seguimiento musical con diseño modular.</p>
+        <div class="tags">
+          <span class="tag">Frontend</span>
+          <span class="tag">UI</span>
         </div>
-    </section>
+      </article>
 
-    <!-- SOBRE MI -->
-    <section id="sobremi">
-        <h2>Sobre mí</h2>
+      <article class="card">
+        <img src="img/foto.jpg" alt="Proyecto" />
+        <h4>Portfolio Profesional</h4>
+        <p>Web personal enfocada en estructura, diseño y claridad visual.</p>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+        </div>
+      </article>
 
-        <img src="img/Prueba.jpg" alt="Imagen representativa del desarrollador">
+      <article class="card">
+        <img src="img/foto.jpg" alt="Proyecto" />
+        <h4>Dashboard Concept</h4>
+        <p>Maquetación tipo aplicación con estilo profesional.</p>
+        <div class="tags">
+          <span class="tag">UI</span>
+          <span class="tag">Layout</span>
+        </div>
+      </article>
 
-        <p>
-            Me llamo Marcos y soy estudiante de desarrollo web. Desde que
-            empecé a aprender HTML y CSS me he interesado por entender cómo
-            se construyen las páginas web desde la base, cuidando tanto la
-            estructura como el diseño visual.
-        </p>
+    </div>
+  </section>
 
-        <p>
-            Me gusta trabajar con código limpio, bien organizado y fácil de
-            mantener. Considero que una buena base en HTML semántico y CSS
-            bien estructurado es fundamental antes de pasar a tecnologías
-            más avanzadas.
-        </p>
+  <!-- CONTACTO -->
+  <section id="contacto" class="section">
+    <h3>Contacto</h3>
 
-        <p>
-            Actualmente sigo formándome y realizando proyectos personales
-            para mejorar mis habilidades y adquirir una base sólida en
-            desarrollo front-end.
-        </p>
+    <form class="contact-form">
+      <label>
+        Nombre
+        <input type="text" placeholder="Tu nombre" />
+      </label>
 
-        <h3>Habilidades principales</h3>
-        <ul>
-            <li>Maquetación web con HTML5 semántico</li>
-            <li>Estilos CSS organizados y reutilizables</li>
-            <li>Diseño responsive básico</li>
-            <li>Buenas prácticas de accesibilidad</li>
-            <li>Organización de proyectos web</li>
-        </ul>
-    </section>
+      <label>
+        Email
+        <input type="email" placeholder="correo@email.com" />
+      </label>
 
-    <!-- PROYECTOS -->
-    <section id="proyectos">
-        <h2>Proyectos</h2>
+      <label>
+        Mensaje
+        <textarea placeholder="Escribe tu mensaje"></textarea>
+      </label>
 
-        <p>
-            A continuación se muestran algunos proyectos de ejemplo que he
-            desarrollado durante mi formación. Estos proyectos me han
-            permitido practicar la estructura HTML, el uso de CSS y el
-            diseño de interfaces claras y funcionales.
-        </p>
-
-        <article>
-            <h3>Proyecto 1: Web personal</h3>
-            <img src="img/Prueba.jpg" alt="Captura del proyecto web personal">
-            <p>
-                Desarrollo de una página web personal tipo landing page,
-                utilizando únicamente HTML y CSS. El objetivo principal fue
-                crear una estructura clara y un diseño visual coherente.
-            </p>
-        </article>
-
-        <article>
-            <h3>Proyecto 2: Página de servicios</h3>
-            <img src="img/Prueba.jpg" alt="Captura del proyecto de servicios">
-            <p>
-                Diseño de una página informativa para un negocio ficticio,
-                con varias secciones, navegación interna y estilos
-                personalizados sin frameworks.
-            </p>
-        </article>
-
-        <article>
-            <h3>Proyecto 3: Portfolio académico</h3>
-            <img src="img/Prueba.jpg" alt="Captura del portfolio académico">
-            <p>
-                Portfolio desarrollado como proyecto académico, siguiendo
-                requisitos específicos y aplicando buenas prácticas de
-                maquetación y diseño responsive.
-            </p>
-        </article>
-    </section>
-
-    <!-- CONTACTO -->
-    <section id="contacto">
-        <h2>Contacto</h2>
-
-        <p>
-            Si deseas ponerte en contacto conmigo para cualquier consulta,
-            colaboración o propuesta, puedes hacerlo a través del siguiente
-            formulario. Este formulario no tiene funcionalidad real y se
-            incluye únicamente con fines demostrativos.
-        </p>
-
-        <form>
-            <p>
-                <label>Nombre:</label><br>
-                <input type="text" placeholder="Tu nombre">
-            </p>
-
-            <p>
-                <label>Email:</label><br>
-                <input type="email" placeholder="Tu email">
-            </p>
-
-            <p>
-                <label>Mensaje:</label><br>
-                <textarea placeholder="Escribe tu mensaje aquí"></textarea>
-            </p>
-
-            <p>
-                <input type="submit" value="Enviar mensaje">
-            </p>
-        </form>
-    </section>
+      <button type="submit" class="btn-primary">Enviar</button>
+    </form>
+  </section>
 
 </main>
 
-<!-- PIE DE PÁGINA -->
-<footer>
-    <p>© 2026 - Mi Portfolio Profesional</p>
+<footer class="app-footer">
+  <p>© 2026 · Portfolio profesional</p>
 </footer>
 
 </body>
