@@ -1,3 +1,21 @@
+# Portfolio Profesional — Marcos Heredia
+
+Este repositorio contiene un portfolio estático listo para usar y personalizar. Está implementado únicamente con HTML y CSS (sin JavaScript).
+
+- Abrir `index.html` en un navegador para ver el sitio.
+- Reemplaza `img/photo.jpg` con tu foto profesional; si no existe, se cargará una imagen genérica desde Unsplash.
+- Modifica los textos (nombre, email, proyectos) en `index.html` para añadir tus datos reales.
+
+Estructura principal:
+
+-- `index.html` — página principal
+-- `css/style.css` — estilos
+-- Sin JavaScript: todo el comportamiento se implementa con HTML/CSS.
+
+¿Siguiente paso sugerido?
+
+- Añadir un PDF de CV en la carpeta `assets/` y enlazarlo desde la sección Sobre mí.
+- Subir al hosting (Netlify, Vercel o GitHub Pages) para compartir con reclutadores.
 📂 Proyecto: Portfolio Profesional Web
 Este repositorio contiene el desarrollo de un portfolio profesional web, una herramienta fundamental para perfiles técnicos en el ámbito del desarrollo y diseño web[cite: 3].
 El objetivo principal es diseñar y maquetar una interfaz clara, usable y visualmente coherente que muestre perfil, habilidades y trabajos, utilizando únicamente HTML y CSS[cite: 4, 5].

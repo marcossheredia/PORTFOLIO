@@ -1,0 +1,123 @@
+:root{
+  /*
+    Variables de diseño globales
+    - --bg / --card: colores base para fondo y tarjetas
+    - --muted: color para texto secundario
+    - --accent / --accent-2: colores principales para botones/llamadas
+    - --text: color principal del texto
+    - --radius: radio por defecto para bordes
+    - --container: ancho máximo del contenedor central
+  */
+  --bg:#0f1724;
+  --card:#0b1220;
+  --muted:#9aa4b2;
+  --accent:#2563eb;
+  --accent-2:#06b6d4;
+  --text:#e6eef6;
+  --radius:10px;
+  --container:1100px;
+}
+
+/* Reset / utilidades básicas */
+*{box-sizing:border-box}
+html,body{height:100%}
+html{scroll-behavior:smooth}
+
+/* Body: fondo principal y tipografía */
+body{
+  margin:0;
+  font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;
+  /* Gradiente de fondo vertical que se fija a la ventana para evitar saltos de color al hacer scroll */
+  background:linear-gradient(180deg,#071021 0%, #071428 100%);
+  background-attachment:fixed;
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+}
+
+/* Contenedor central con padding lateral */
+.container{max-width:var(--container);margin:0 auto;padding:0 20px}
+
+/* -----------------------
+   Header / navegación
+   ----------------------- */
+.app-header{background:transparent;padding:18px 0;position:sticky;top:0;z-index:30}
+.nav{display:flex;align-items:center;justify-content:space-between}
+.brand{font-weight:700;font-size:1.05rem}
+.nav-links{display:flex;gap:18px;list-style:none;margin:0;padding:0}
+.nav-links a{color:var(--text);text-decoration:none;opacity:0.9}
+.nav-toggle{display:none;background:none;border:0;color:var(--text);font-size:1.4rem;cursor:pointer}
+.nav-check{display:none}
+
+/* -----------------------
+   Hero / cabecera principal
+   ----------------------- */
+.hero{padding:60px 0}
+.hero-grid{display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:center}
+.hero-text h1{font-size:2.2rem;margin:0 0 8px}
+.lead{color:var(--accent);font-weight:600;margin-bottom:8px}
+.sub{color:var(--muted);margin-bottom:18px}
+.hero-cta{display:flex;gap:12px;margin-bottom:14px}
+
+/* Botones: primario (gradient) y outline */
+.btn{display:inline-block;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:600}
+.btn-primary{background:linear-gradient(90deg,var(--accent),var(--accent-2));color:white}
+.btn-outline{border:1px solid rgba(255,255,255,0.06);color:var(--text);background:transparent}
+
+.meta{list-style:none;padding:0;margin:12px 0 0;color:var(--muted)}
+.meta li{font-size:0.95rem;margin-bottom:6px}
+
+.hero-photo img{width:100%;max-width:320px;border-radius:12px;border:3px solid rgba(255,255,255,0.03)}
+
+/* -----------------------
+   Secciones y tarjetas
+   ----------------------- */
+.section{padding:48px 0}
+.about-grid{display:grid;grid-template-columns:1fr 300px;gap:24px;align-items:start}
+
+/* Tarjetas: ligero gradiente y sombra para elevar sobre el fondo */
+.card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:var(--radius);box-shadow:0 6px 20px rgba(2,6,23,0.6)}
+.contact-card h3{margin-top:0}
+
+/* Grid de proyectos */
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.project img{width:100%;height:150px;object-fit:cover;border-radius:8px}
+.card-body{padding:12px 0}
+.tags{display:flex;gap:8px;margin-top:8px}
+.tags span{background:rgba(255,255,255,0.03);padding:6px 8px;border-radius:6px;font-size:0.85rem}
+
+/* Grid de habilidades */
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.skill{background:rgba(255,255,255,0.02);padding:12px;border-radius:8px;display:flex;justify-content:space-between}
+
+/* -----------------------
+   Formulario de contacto
+   ----------------------- */
+.contact-section .contact-form{display:grid;gap:12px;max-width:700px}
+.contact-form label{display:block;color:var(--muted)}
+.contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
+.form-actions{display:flex;gap:12px;align-items:center}
+.form-status{color:var(--accent-2);margin-top:8px}
+
+/* -----------------------
+   Footer
+   ----------------------- */
+.app-footer{border-top:1px solid rgba(255,255,255,0.03);padding:18px 0;margin-top:30px}
+.app-footer p{margin:0;color:var(--muted)}
+
+/* -----------------------
+   Responsive: adaptaciones para pantallas pequeñas
+   ----------------------- */
+@media (max-width:980px){
+  .hero-grid{grid-template-columns:1fr}
+  .about-grid{grid-template-columns:1fr}
+  .cards-grid{grid-template-columns:repeat(2,1fr)}
+}
+@media (max-width:720px){
+  /* Menú móvil: oculto hasta que se active el checkbox */
+  .nav-links{display:none;position:absolute;right:20px;top:62px;background:var(--card);padding:12px;border-radius:8px;flex-direction:column}
+  .nav-toggle{display:block}
+  /* Mostrar menú cuando el checkbox esté marcado */
+  .nav-check:checked + .nav-toggle + .nav-links{display:flex}
+  .cards-grid{grid-template-columns:1fr}
+  .skills-grid{grid-template-columns:repeat(2,1fr)}
+}
