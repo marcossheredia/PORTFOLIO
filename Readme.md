@@ -5,6 +5,7 @@
 Presenta una landing estática, desarrollada únicamente con HTML y CSS (sin JavaScript), pensada para mostrar tu perfil, habilidades y proyectos de forma clara, rápida y accesible.
 
 Demo rápida
+- Abre este link en tu navegador: portfolio-rho-beige-54.vercel.app
 - Abre `index.html` en tu navegador para ver el sitio localmente.
 
 Características principales
