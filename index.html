@@ -1,144 +1,181 @@
 <!DOCTYPE html>
+<!--
+  index.html
+  Portfolio de Marcos Heredia — versión comentada.
+  Comentarios descriptivos añadidos para cada bloque principal (head, navegación, secciones,
+  proyectos y formulario). Los comentarios no cambian la lógica; solo explican propósito y estructura.
+-->
 <html lang="es">
 <head>
+  <!-- Metadatos del documento: charset, viewport y descripción para SEO/social -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Marcos Heredia · Portfolio Profesional</title>
   <meta name="description" content="Portfolio profesional de Marcos Heredia — Desarrollador Web Frontend" />
+  <!-- Enlace al stylesheet principal (CSS) -->
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 
-<header class="app-header">
-  <nav class="nav container">
-    <div class="brand">Marcos Heredia</div>
-    <input type="checkbox" id="nav-check" class="nav-check" aria-hidden="true" />
-    <label for="nav-check" class="nav-toggle" aria-hidden="true">☰</label>
-    <ul class="nav-links" id="nav-links">
-      <li><a href="#inicio">Inicio</a></li>
-      <li><a href="#sobre-mi">Sobre mí</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-</header>
+  <!--
+    Header / Navegación
+    - Contenedor principal con marca y enlaces de navegación.
+    - Usa un "checkbox hack" simple para el menú móvil: el input tipo checkbox controla
+      la visibilidad de `.nav-links` mediante CSS (sin JavaScript).
+  -->
+  <header class="app-header">
+    <nav class="nav container">
+      <div class="brand">Marcos Heredia</div>
+      <input type="checkbox" id="nav-check" class="nav-check" aria-hidden="true" />
+      <label for="nav-check" class="nav-toggle" aria-hidden="true">☰</label>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#sobre-mi">Sobre mí</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<main>
-  <section id="inicio" class="hero">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <h1>Marcos Heredia</h1>
-        <p class="lead">Desarrollador Web FullStack — Interfaces limpias, rendimiento y accesibilidad.</p>
-        <p class="sub">Trabajo construyendo productos escalables, mantenibles y con enfoque en UX.</p>
-        <div class="hero-cta">
-          <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
-          <a href="#contacto" class="btn btn-outline">Contactar</a>
+  <main>
+    <!--
+      Hero / Cabecera principal
+      - Estructura en grid con texto a la izquierda y foto a la derecha (en pantallas grandes).
+      - Incluye CTA (ver proyectos / contactar) y datos de contacto rápidos.
+    -->
+    <section id="inicio" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <h1>Marcos Heredia</h1>
+          <p class="lead">Desarrollador Web FullStack — Interfaces limpias, rendimiento y accesibilidad.</p>
+          <p class="sub">Trabajo construyendo productos escalables, mantenibles y con enfoque en UX.</p>
+          <div class="hero-cta">
+            <a href="#proyectos" class="btn btn-primary">Ver proyectos</a>
+            <a href="#contacto" class="btn btn-outline">Contactar</a>
+          </div>
+          <ul class="meta">
+            <li><strong>Email:</strong> <a href="mailto:marcossheredia06@gmail.com">marcossheredia06@gmail.com</a></li>
+            <li><strong>Tel:</strong> +34 696 961 015</li>
+            <li><strong>Localización:</strong> Madrid, España</li>
+          </ul>
         </div>
-        <ul class="meta">
-          <li><strong>Email:</strong> <a href="mailto:marcossheredia06@gmail.com">marcossheredia06@gmail.com</a></li>
-          <li><strong>Tel:</strong> +34 696 961 015</li>
-          <li><strong>Localización:</strong> Madrid, España</li>
-        </ul>
-      </div>
 
-      <div class="hero-photo">
-        <img src="img/Mhsr.jpg" alt="Foto profesional" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop'" />
-      </div>
-    </div>
-  </section>
-
-  <section id="sobre-mi" class="section container">
-    <h2>Sobre mí</h2>
-    <div class="about-grid">
-      <div>
-        <p>Soy desarrollador FullStack con experiencia en la creación de aplicaciones web modernas, eficientes y centradas en el usuario. Trabajo habitualmente con Vue 3, JavaScript y CSS moderno, cuidando tanto la arquitectura del código como el diseño visual y la usabilidad.</p>
-        <p>Me gusta construir interfaces limpias, mantenibles y bien estructuradas, prestando especial atención al rendimiento, la experiencia en dispositivos móviles y las buenas prácticas de desarrollo. Tengo experiencia desarrollando proyectos reales completos, desde paneles de administración hasta aplicaciones orientadas a negocio, incluyendo gestión de productos, pedidos y contenido.</p>
-        <p>Busco seguir creciendo como desarrollador dentro de equipos donde se valore el código bien hecho, la mejora continua y el enfoque práctico para resolver problemas reales.</p>
-      </div>
-      <div class="card contact-card">
-        <h3>Resumen</h3>
-        <ul>
-          <li><strong>Perfil:</strong> Frontend Developer</li>
-          <li><strong>Especialidad:</strong> Desarrollo web y UI</li>
-          <li><strong>Stack:</strong> HTML, CSS (Flexbox, Grid), JavaScript, Vue 3</li>
-          <li><strong>Experiencia:</strong> Proyectos reales y aplicaciones completas</li>
-          <li><strong>Enfoque:</strong> Código limpio, responsive y mantenible</li>
-          <li><strong>Disponibilidad:</strong> Jornada completa / remoto</li>
-        </ul>
-        <a class="btn btn-primary" href="#contacto">Solicitar CV</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="proyectos" class="section container">
-    <h2>Proyectos destacados</h2>
-    <div class="cards-grid">
-
-      <article class="card project">
-        <a href="https://api-rest-htm.vercel.app/" target="_blank" rel="noopener noreferrer">
-          <img src="img/musica.jpg" alt="Music Tracker" onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop'" />
-        </a>
-        <div class="card-body">
-          <h3><a href="https://api-rest-htm.vercel.app/" target="_blank" rel="noopener noreferrer">Music Tracker App</a></h3>
-          <p>Aplicación para gestión y descubrimiento de música con componentes reutilizables y tests E2E.</p>
-          <div class="tags"><span>Html</span><span>JavaScript</span><span>Testing</span><span>CSS</span></div>
+        <!-- Imagen de perfil / presentación. `onerror` proporciona un fallback externo si falta la local -->
+        <div class="hero-photo">
+          <img src="img/Mhsr.jpg" alt="Foto profesional" onerror="this.src='https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=800&auto=format&fit=crop'" />
         </div>
-      </article>
-
-      <article class="card project">
-        <a href="https://xn--baostres60-u9a.com/" target="_blank" rel="noopener noreferrer">
-          <img src="img/Logo sello.png" alt="Baños Tres60" />
-        </a>
-        <div class="card-body">
-          <h3><a href="https://xn--baostres60-u9a.com/" target="_blank" rel="noopener noreferrer">Baños Tres60</a></h3>
-          <p>Proyecto personal — web y branding para Baños Tres60. Enlace al sitio del proyecto.</p>
-          <div class="tags"><span>Vue.js</span><span>Web</span></div>
-        </div>
-      </article>
-
-    </div>
-  </section>
-
-  <section id="habilidades" class="section container">
-    <h2>Habilidades</h2>
-    <div class="skills-grid">
-      <div class="skill"><strong>HTML/CSS</strong><span>Avanzado</span></div>
-      <div class="skill"><strong>JavaScript</strong><span>Intermedio</span></div>
-      <div class="skill"><strong>Java / TypeScript</strong><span>Avanzado</span></div>
-      <div class="skill"><strong>git</strong><span>Intermedio</span></div>
-      <div class="skill"><strong>Angular</strong><span>Intermedio</span></div>
-      <div class="skill"><strong>MySQL</strong><span>Avanzado</span></div>
-    </div>
-  </section>
-
-  <section id="contacto" class="section container contact-section">
-    <h2>Contacto</h2>
-    <!-- Formulario sin JavaScript: usa Formsubmit.co (HTML-only) -->
-    <form id="contact-form" class="contact-form" action="https://formsubmit.co/marcossheredia06@gmail.com" method="POST">
-      <!-- Opcionales: personaliza asunto y desactiva captcha de Formsubmit si quieres -->
-      <input type="hidden" name="_subject" value="Nuevo mensaje desde portfolio" />
-      <input type="hidden" name="_captcha" value="false" />
-      <label>Nombre<input type="text" name="name" placeholder="Tu nombre" required></label>
-      <label>Email<input type="email" name="email" placeholder="correo@ejemplo.com" required></label>
-      <label>Mensaje<textarea name="message" placeholder="Escribe un mensaje" required></textarea></label>
-      <div class="form-actions">
-        <button type="submit" class="btn btn-primary">Enviar mensaje</button>
-        <a class="btn btn-outline" href="mailto:marcos.heredia.dev@example.com">O enviar por email</a>
       </div>
-      <p id="form-status" class="form-status" aria-live="polite"></p>
-    </form>
-  </section>
+    </section>
 
-</main>
+    <!--
+      Sección "Sobre mí"
+      - Texto de presentación y una tarjeta resumen con puntos clave (perfil, stack, disponibilidad).
+      - Estructura pensada para ser legible y adaptarse en columnas en pantallas grandes.
+    -->
+    <section id="sobre-mi" class="section container">
+      <h2>Sobre mí</h2>
+      <div class="about-grid">
+        <div>
+          <p>Soy desarrollador FullStack con experiencia en la creación de aplicaciones web modernas, eficientes y centradas en el usuario. Trabajo habitualmente con Vue 3, JavaScript y CSS moderno, cuidando tanto la arquitectura del código como el diseño visual y la usabilidad.</p>
+          <p>Me gusta construir interfaces limpias, mantenibles y bien estructuradas, prestando especial atención al rendimiento, la experiencia en dispositivos móviles y las buenas prácticas de desarrollo. Tengo experiencia desarrollando proyectos reales completos, desde paneles de administración hasta aplicaciones orientadas a negocio, incluyendo gestión de productos, pedidos y contenido.</p>
+          <p>Busco seguir creciendo como desarrollador dentro de equipos donde se valore el código bien hecho, la mejora continua y el enfoque práctico para resolver problemas reales.</p>
+        </div>
+        <div class="card contact-card">
+          <h3>Resumen</h3>
+          <ul>
+            <li><strong>Perfil:</strong> Frontend Developer</li>
+            <li><strong>Especialidad:</strong> Desarrollo web y UI</li>
+            <li><strong>Stack:</strong> HTML, CSS (Flexbox, Grid), JavaScript, Vue 3</li>
+            <li><strong>Experiencia:</strong> Proyectos reales y aplicaciones completas</li>
+            <li><strong>Enfoque:</strong> Código limpio, responsive y mantenible</li>
+            <li><strong>Disponibilidad:</strong> Jornada completa / remoto</li>
+          </ul>
+          <a class="btn btn-primary" href="#contacto">Solicitar CV</a>
+        </div>
+      </div>
+    </section>
 
-<footer class="app-footer">
-  <div class="container">
-    <p>© 2026 Marcos Heredia · Portfolio profesional. </p>
-  </div>
-</footer>
+    <!--
+      Proyectos destacados
+      - Cada `article.card.project` representa un proyecto: imagen, título, descripción y etiquetas.
+      - Los enlaces abren en pestaña nueva (`target="_blank"`) con `rel="noopener noreferrer` por seguridad.
+    -->
+    <section id="proyectos" class="section container">
+      <h2>Proyectos destacados</h2>
+      <div class="cards-grid">
 
-</body>
-</html>
+        <article class="card project">
+          <a href="https://api-rest-htm.vercel.app/" target="_blank" rel="noopener noreferrer">
+            <img src="img/musica.jpg" alt="Music Tracker" onerror="this.src='https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=800&auto=format&fit=crop'" />
+          </a>
+          <div class="card-body">
+            <h3><a href="https://api-rest-htm.vercel.app/" target="_blank" rel="noopener noreferrer">Music Tracker App</a></h3>
+            <p>Aplicación para gestión y descubrimiento de música con componentes reutilizables y tests E2E.</p>
+            <div class="tags"><span>Html</span><span>JavaScript</span><span>Testing</span><span>CSS</span></div>
+          </div>
+        </article>
+
+        <article class="card project">
+          <a href="https://xn--baostres60-u9a.com/" target="_blank" rel="noopener noreferrer">
+            <img src="img/Logo sello.png" alt="Baños Tres60" />
+          </a>
+          <div class="card-body">
+            <h3><a href="https://xn--baostres60-u9a.com/" target="_blank" rel="noopener noreferrer">Baños Tres60</a></h3>
+            <p>Proyecto personal — web y branding para Baños Tres60. Enlace al sitio del proyecto.</p>
+            <div class="tags"><span>Vue.js</span><span>Web</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!--
+      Habilidades
+      - Grid simple para mostrar tecnologías y nivel aproximado.
+    -->
+    <section id="habilidades" class="section container">
+      <h2>Habilidades</h2>
+      <div class="skills-grid">
+        <div class="skill"><strong>HTML/CSS</strong><span>Avanzado</span></div>
+        <div class="skill"><strong>JavaScript</strong><span>Intermedio</span></div>
+        <div class="skill"><strong>Java / TypeScript</strong><span>Avanzado</span></div>
+        <div class="skill"><strong>git</strong><span>Intermedio</span></div>
+        <div class="skill"><strong>Angular</strong><span>Intermedio</span></div>
+        <div class="skill"><strong>MySQL</strong><span>Avanzado</span></div>
+      </div>
+    </section>
+
+    <!--
+      Contacto
+      - Formulario HTML que envía a Formsubmit.co (servicio que permite POST a email sin backend).
+      - Campos ocultos: `_subject` personaliza el asunto; `_captcha=false` desactiva el captcha de Formsubmit.
+      - `aria-live="polite"` en `#form-status` para notificar resultados accesibles sin JS adicional.
+    -->
+    <section id="contacto" class="section container contact-section">
+      <h2>Contacto</h2>
+      <form id="contact-form" class="contact-form" action="https://formsubmit.co/marcossheredia06@gmail.com" method="POST">
+        <input type="hidden" name="_subject" value="Nuevo mensaje desde portfolio" />
+        <input type="hidden" name="_captcha" value="false" />
+        <label>Nombre<input type="text" name="name" placeholder="Tu nombre" required></label>
+        <label>Email<input type="email" name="email" placeholder="correo@ejemplo.com" required></label>
+        <label>Mensaje<textarea name="message" placeholder="Escribe un mensaje" required></textarea></label>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Enviar mensaje</button>
+          <a class="btn btn-outline" href="mailto:marcos.heredia.dev@example.com">O enviar por email</a>
+        </div>
+        <p id="form-status" class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+
+  </main>
+
+  <footer class="app-footer">
+    <!-- Pie de página: derechos y créditos mínimos -->
+    <div class="container">
+      <p>© 2026 Marcos Heredia · Portfolio profesional. </p>
+    </div>
+  </footer>
+
 </body>
 </html>

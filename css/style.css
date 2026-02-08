@@ -18,16 +18,21 @@
   --container:1100px;
 }
 
-/* Reset / utilidades básicas */
+/* Reset / utilidades básicas
+   - `box-sizing: border-box` para evitar sorpresas en cálculos de anchura
+   - `scroll-behavior: smooth` mejora navegación entre anclas
+*/
 *{box-sizing:border-box}
 html,body{height:100%}
 html{scroll-behavior:smooth}
 
-/* Body: fondo principal y tipografía */
+/* Body: fondo principal y tipografía
+   - Gradiente fijo para un fondo estable al hacer scroll
+   - Fuente definida (Inter/segundas opciones) y antialiasing para mejor lectura
+*/
 body{
   margin:0;
   font-family:Inter,Segoe UI,system-ui,Arial,sans-serif;
-  /* Gradiente de fondo vertical que se fija a la ventana para evitar saltos de color al hacer scroll */
   background:linear-gradient(180deg,#071021 0%, #071428 100%);
   background-attachment:fixed;
   color:var(--text);
@@ -39,6 +44,8 @@ body{
 
 /* -----------------------
    Header / navegación
+   - `.app-header` es sticky para mantenerse visible al hacer scroll
+   - `.nav-toggle` y `.nav-check` implementan el menú mobile sin JS
    ----------------------- */
 .app-header{background:transparent;padding:18px 0;position:sticky;top:0;z-index:30}
 .nav{display:flex;align-items:center;justify-content:space-between}
@@ -50,6 +57,8 @@ body{
 
 /* -----------------------
    Hero / cabecera principal
+   - Grid con columna de texto y columna de imagen
+   - `.lead` destaca la proposición de valor usando `--accent`
    ----------------------- */
 .hero{padding:60px 0}
 .hero-grid{display:grid;grid-template-columns:1fr 320px;gap:40px;align-items:center}
@@ -70,6 +79,7 @@ body{
 
 /* -----------------------
    Secciones y tarjetas
+   - `.about-grid` y `.cards-grid` usan grid para distribuir contenido
    ----------------------- */
 .section{padding:48px 0}
 .about-grid{display:grid;grid-template-columns:1fr 300px;gap:24px;align-items:start}
@@ -91,6 +101,7 @@ body{
 
 /* -----------------------
    Formulario de contacto
+   - Estilos simples para inputs y textarea, con foco en legibilidad y contraste
    ----------------------- */
 .contact-section .contact-form{display:grid;gap:12px;max-width:700px}
 .contact-form label{display:block;color:var(--muted)}
@@ -106,6 +117,7 @@ body{
 
 /* -----------------------
    Responsive: adaptaciones para pantallas pequeñas
+   - Ajustes de grid y menú móvil
    ----------------------- */
 @media (max-width:980px){
   .hero-grid{grid-template-columns:1fr}
